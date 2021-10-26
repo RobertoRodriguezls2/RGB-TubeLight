@@ -22,6 +22,11 @@ An example wiring diagram is shown below but you can adjust it depending on your
 
 ![RGB Tube Light Diagram](https://user-images.githubusercontent.com/79487120/138625282-659dbf73-507c-4b82-818b-f806f1851a49.png)
 
+
+## Demo Video
+![Screenshot 2021-10-26 014912](https://user-images.githubusercontent.com/79487120/138844441-968c4a0c-b5c8-4adb-be39-7ccad97239d4.png)
+[![RGB Tube Light Demo](https://user-images.githubusercontent.com/79487120/138844441-968c4a0c-b5c8-4adb-be39-7ccad97239d4.png)](https://youtu.be/ndP7aVbPUag)
+
 A few resources to get you started if this is your first Flutter project:
 
 - [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
@@ -31,3 +36,4 @@ For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
+![Screenshot 2021-10-26 014912](https://user-images.githubusercontent.com/79487120/138844441-968c4a0c-b5c8-4adb-be39-7ccad97239d4.png)
