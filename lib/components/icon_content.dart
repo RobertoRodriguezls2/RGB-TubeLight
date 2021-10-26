@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:rgp_app/RGBconstants.dart';
+import 'package:rgp_app/components/RGBconstants.dart';
 
 class IconContent extends StatelessWidget {
   IconContent({this.symbol, this.label});
@@ -12,7 +12,7 @@ class IconContent extends StatelessWidget {
       children: <Widget>[
         Icon(
           symbol,
-          size: 80.0,
+          size: 40.0,
         ),
         SizedBox(
           height: 15.0,

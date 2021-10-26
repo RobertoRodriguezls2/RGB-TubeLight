@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:rgp_app/RGBconstants.dart';
+import 'package:rgp_app/components/RGBconstants.dart';
 
 class BottomButton extends StatelessWidget {
   BottomButton({@required this.onTap, @required this.buttonTitle});

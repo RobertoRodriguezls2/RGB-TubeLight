@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rgp_app/components/RGBconstants.dart';
 
 class ReusableCard extends StatelessWidget {
   ReusableCard({@required this.colour, this.cardChild, this.onPress});

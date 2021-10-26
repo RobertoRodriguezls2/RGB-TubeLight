@@ -21,7 +21,7 @@ environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
-  flutter_bluetooth_serial: ^0.2.2
+  flutter_bluetooth_serial: ^0.4.0
   cyclop: ^0.4.1
   flutter_circle_color_picker: ^0.3.0
   font_awesome_flutter: ^9.0.0

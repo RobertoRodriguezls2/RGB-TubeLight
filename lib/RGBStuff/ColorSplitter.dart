@@ -3,11 +3,12 @@ import 'dart:typed_data';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bluetooth_serial/flutter_bluetooth_serial.dart';
 import 'package:flutter_circle_color_picker/flutter_circle_color_picker.dart';
 import 'package:rgp_app/components/bottom_button.dart';
 import 'package:rgp_app/components/reusable_card.dart';
-import '../RGBconstants.dart';
+import '../components/RGBconstants.dart';
 
 class ColorSplitter extends StatefulWidget {
   final BluetoothDevice server;
@@ -119,6 +120,7 @@ class _ColorSplitterState extends State<ColorSplitter> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
               Expanded(
+                flex: 1,
                 child: ReusableCard(
                   colour: kActiveCardColor,
                   cardChild: Column(
@@ -143,9 +145,9 @@ class _ColorSplitterState extends State<ColorSplitter> {
                           thumbColor: Color(0xFFcd32b5),
                           overlayColor: Color(0x29EB1555),
                           thumbShape:
-                              RoundSliderThumbShape(enabledThumbRadius: 15.0),
+                              RoundSliderThumbShape(enabledThumbRadius: 10.0),
                           overlayShape:
-                              RoundSliderOverlayShape(overlayRadius: 30.0),
+                              RoundSliderOverlayShape(overlayRadius: 25.0),
                         ),
                         child: Slider(
                           value: bright.toDouble(),
@@ -164,6 +166,7 @@ class _ColorSplitterState extends State<ColorSplitter> {
                 ),
               ),
               Expanded(
+                flex: 1,
                 child: ReusableCard(
                   colour: kActiveCardColor,
                   cardChild: Column(
@@ -188,9 +191,9 @@ class _ColorSplitterState extends State<ColorSplitter> {
                           thumbColor: Color(0xFFb5cd32),
                           overlayColor: Color(0x29EB1555),
                           thumbShape:
-                              RoundSliderThumbShape(enabledThumbRadius: 15.0),
+                              RoundSliderThumbShape(enabledThumbRadius: 10.0),
                           overlayShape:
-                              RoundSliderOverlayShape(overlayRadius: 30.0),
+                              RoundSliderOverlayShape(overlayRadius: 15.0),
                         ),
                         child: Slider(
                           value: secbright.toDouble(),
@@ -209,29 +212,38 @@ class _ColorSplitterState extends State<ColorSplitter> {
               ),
             ],
           ),
-          Container(
-            child: Row(
-              children: <Widget>[
-                CircleColorPicker(
-                  onChanged: (color) {
-                    setState(() => _currentColor = color);
-                  },
-                  size: const Size(240, 240),
-                  strokeWidth: 4,
-                  thumbSize: 36,
-                ),
-                SizedBox(
-                  width: 100.0,
-                ),
-                CircleColorPicker(
-                  onChanged: (color2) {
-                    setState(() => _currentColor2 = color2);
-                  },
-                  size: const Size(240, 240),
-                  strokeWidth: 4,
-                  thumbSize: 36,
-                ),
-              ],
+          Expanded(
+            flex: 2,
+            child: Container(
+              child: Row(
+                children: <Widget>[
+                  Expanded(
+                    flex: 1,
+                    child: CircleColorPicker(
+                      onChanged: (color) {
+                        setState(() => _currentColor = color);
+                      },
+                      size: const Size(240, 240),
+                      strokeWidth: 4,
+                      thumbSize: 36,
+                    ),
+                  ),
+                  // SizedBox(
+                  //   width: 10.0,
+                  // ),
+                  Expanded(
+                    flex: 1,
+                    child: CircleColorPicker(
+                      onChanged: (color2) {
+                        setState(() => _currentColor2 = color2);
+                      },
+                      size: const Size(240, 240),
+                      strokeWidth: 4,
+                      thumbSize: 36,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
           Expanded(

@@ -8,7 +8,7 @@ import 'package:flutter_bluetooth_serial/flutter_bluetooth_serial.dart';
 import 'package:flutter_circle_color_picker/flutter_circle_color_picker.dart';
 import 'package:rgp_app/components/reusable_card.dart';
 import 'package:rgp_app/components/icon_content.dart';
-import 'package:rgp_app/RGBconstants.dart';
+import 'package:rgp_app/components/RGBconstants.dart';
 import 'package:rgp_app/components/bottom_button.dart';
 
 enum Preset { red, green, blue, orange, teal, yellow, purple, pink }
@@ -323,26 +323,29 @@ class _Colorselect extends State<Colorselect> {
                         ),
                       ],
                     ),
-                    SliderTheme(
-                      data: SliderTheme.of(context).copyWith(
-                        inactiveTrackColor: Color(0xFF8D8E98),
-                        activeTrackColor: Colors.white,
-                        thumbColor: Color(0xFFEB1555),
-                        overlayColor: Color(0x29EB1555),
-                        thumbShape:
-                            RoundSliderThumbShape(enabledThumbRadius: 15.0),
-                        overlayShape:
-                            RoundSliderOverlayShape(overlayRadius: 30.0),
-                      ),
-                      child: Slider(
-                        value: bright.toDouble(),
-                        min: 0.0,
-                        max: 254.0,
-                        onChanged: (double newValue) {
-                          setState(() {
-                            bright = newValue.round();
-                          });
-                        },
+                    Expanded(
+                      flex: 2,
+                      child: SliderTheme(
+                        data: SliderTheme.of(context).copyWith(
+                          inactiveTrackColor: Color(0xFF8D8E98),
+                          activeTrackColor: Colors.white,
+                          thumbColor: Color(0xFFEB1555),
+                          overlayColor: Color(0x29EB1555),
+                          thumbShape:
+                              RoundSliderThumbShape(enabledThumbRadius: 15.0),
+                          overlayShape:
+                              RoundSliderOverlayShape(overlayRadius: 30.0),
+                        ),
+                        child: Slider(
+                          value: bright.toDouble(),
+                          min: 0.0,
+                          max: 254.0,
+                          onChanged: (double newValue) {
+                            setState(() {
+                              bright = newValue.round();
+                            });
+                          },
+                        ),
                       ),
                     )
                   ],

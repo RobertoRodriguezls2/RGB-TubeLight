@@ -5,12 +5,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:rgp_app/RGBstuff/ColorSplitter.dart';
+import 'package:rgp_app/components/RGBconstants.dart';
 import 'package:rgp_app/components/reusable_card.dart';
 import 'package:rgp_app/components/icon_content.dart';
 import 'package:flutter_bluetooth_serial/flutter_bluetooth_serial.dart';
 import 'package:rgp_app/DiscoveryPage.dart';
-
-import '../RGBconstants.dart';
 
 class InputPage2 extends StatefulWidget {
   @override
@@ -40,34 +39,37 @@ class _InputPage2State extends State<InputPage2> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Expanded(
-                  child: ReusableCard(
-                    onPress: () async {
-                      final BluetoothDevice selectedDevice =
-                          await Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (context) {
-                            return DiscoveryPage();
-                          },
-                        ),
-                      );
-                      if (selectedDevice != null) {
-                        print(
-                            'Discovery -> selected ' + selectedDevice.address);
-                        device = selectedDevice;
-                      } else {
-                        print('Discovery -> no device selected');
-                      }
-                    },
-                    colour: kActiveCardColor,
-                    cardChild: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        IconContent(
-                          symbol: FontAwesomeIcons.search,
-                          label: 'Search',
-                        ),
-                      ],
+                  child: Padding(
+                    padding: const EdgeInsets.all(0.0),
+                    child: ReusableCard(
+                      onPress: () async {
+                        final BluetoothDevice selectedDevice =
+                            await Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return DiscoveryPage();
+                            },
+                          ),
+                        );
+                        if (selectedDevice != null) {
+                          print('Discovery -> selected ' +
+                              selectedDevice.address);
+                          device = selectedDevice;
+                        } else {
+                          print('Discovery -> no device selected');
+                        }
+                      },
+                      colour: kActiveCardColor,
+                      cardChild: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          IconContent(
+                            symbol: FontAwesomeIcons.search,
+                            label: 'Search',
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),

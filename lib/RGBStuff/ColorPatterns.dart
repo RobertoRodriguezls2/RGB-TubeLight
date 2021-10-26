@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:rgp_app/components/reusable_card.dart';
 import 'package:rgp_app/components/icon_content.dart';
-import 'package:rgp_app/RGBconstants.dart';
+import 'package:rgp_app/components/RGBconstants.dart';
 import 'dart:async';
 import 'dart:convert';
 import 'dart:typed_data';
