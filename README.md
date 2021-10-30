@@ -1,6 +1,6 @@
 # RGB-TubeLight
 
-For all photo and videographers who don't want to spend huge amounts of money on name brand LED tube lights, this is a DIY solution that builds on from to the generic DIY tube lights found across Youtube. What makes this different from the generic DIY Tube lights on Youtube is that this uses the WS2812b LED strip. This allows for full control of the LED's as they're individually addressable which lets you play custom patterns and effects.
+This project contains the firmware for the arduino and the code for the mobile app. For all photo and videographers who don't want to spend huge amounts of money on name brand LED tube lights, this is a DIY solution that builds on from to the generic DIY tube lights found across Youtube. What makes this different from the generic DIY Tube lights on Youtube is that this project allows full control over bluetooth through the use of the App and arduino firmware.
 
 ## Arduino Hardware
 
