@@ -7,22 +7,27 @@ The mobile app for now only works on android devices as the bluetooth library us
 
 ## Main Menu
 Here is the main menu of the app where you can navigate between screens
+
 ![Main menu](https://user-images.githubusercontent.com/79487120/139559612-a35fcad9-84f3-4c8f-9de9-8f1574a5f463.png)
 
 ## Color Pallete
 Here preset colors can be chosen along with the brightness of each color 
+
 ![Color Pallete](https://user-images.githubusercontent.com/79487120/139559635-af2c8b21-bf5f-4fd4-b2b4-f20ea60574e9.png)
 
 ## Color Wheel
 Here any color can be chosen along with the saturation of the color. An issue of wrong colors being displayed happens when the color selected is being dragged too quickly
+
 ![Color Wheel](https://user-images.githubusercontent.com/79487120/139559661-ddf1b889-c9e5-4946-8173-198a513c19f6.png)
 
 ## Color Splitting
 Here a user can choose any ratio of LEDs to be to different colors. This allows for your creativity of having a two tone light.
+
 ![Index](https://user-images.githubusercontent.com/79487120/139559686-1447a5a6-f86c-4904-9f57-16c07ee6febf.png)
 
 ## Patterns
 Here preset patterns can be programmed into the arduinos firmware to play for a preset amount of time. For now a rainbow display and a strobe light are the preset patterns that run for about 2 seconds.
+
 ![Patterns](https://user-images.githubusercontent.com/79487120/139559717-9f86ccce-7d96-44e4-a009-4fc43c1680c7.png)
 
 ## Demo Video
